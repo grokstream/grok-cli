@@ -1,0 +1,4 @@
+certifi
+pyyaml
+requests
+prettytable
