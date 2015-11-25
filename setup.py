@@ -1,5 +1,5 @@
 #------------------------------------------------------------------------------
-# Copyright 2013-2014 Numenta Inc.
+# Copyright 2013-2014 Avik Partners, LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -110,7 +110,7 @@ execfile("grokcli/__version__.py", {}, version)
 setup(
   name = "grokcli",
   description = "Grok Command Line Interface",
-  url = "https://github.com/numenta/numenta-apps/grok-cli",
+  url = "https://github.com/grokstream/grok-cli",
   classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Environment :: Console",
@@ -119,13 +119,13 @@ setup(
     "License :: OSI Approved :: Apache Software License",
     "Programming Language :: Python :: 2",
     "Topic :: Utilities"],
-  keywords = "grok, numenta, anomaly detection, monitoring",
-  author = "Austin Marshall, Chetan Surpur",
-  author_email = "amarshall@numenta.com, csurpur@numenta.com",
+  keywords = "grok, grokstream, anomaly detection, monitoring",
+  author = "Avik Partners, LLC",
+  author_email = "support@grokstream.com",
   packages = find_packages(),
   entry_points = {"console_scripts": ["grok = grokcli:main"]},
   install_requires = requirements,
-  extras_require = {"docs": ["sphinx"], "samples": ["dogapi"]},
+  extras_require = {"docs": ["sphinx"], "samples": ["datadog"]},
   version = version["__version__"]
 )
 

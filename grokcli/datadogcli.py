@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #------------------------------------------------------------------------------
-# Copyright 2013-2014 Numenta Inc.
+# Copyright 2013-2014 Avik Partners, LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -30,7 +30,7 @@ the Datadog metric name.
 Anomaly scores are transformed from what the Grok API returns into what is
 shown in the Grok mobile client as the height of the bars.
 
-Note: This sample requires the `dogapi` library, which can be installed with
+Note: This sample requires the `datadog` python library, which can be installed with
 the samples bundle: `pip install grokcli[samples]`.
 """
 
@@ -42,7 +42,6 @@ import sys
 import ast
 import json
 
-# from dogapi import dog_http_api
 from datadog import initialize, api
 
 from grokcli.api import GrokSession
@@ -122,9 +121,8 @@ def sendDataToDatadog(datadogApiKey, grokServer, grokApiKey, numRecords,
   two datasets in the Datadog format: one for the values and one for the
   anomaly scores.
   """
-  # Configure the Datadog library
-  # dog_http_api.api_key = datadogApiKey
 
+  # Configure the Datadog python library
   options = {
     'api_key': datadogApiKey
   }
@@ -142,14 +140,13 @@ def sendDataToDatadog(datadogApiKey, grokServer, grokApiKey, numRecords,
 
   print "Sending %i records for metric %s on server %s" % (
       len(valuesData), metricName, server)
-  # response = dog_http_api.metric(metricName + ".value", valuesData,
-  #                                host=server)
   response = api.Metric.send(metric=metricName + ".value", points=valuesData, host=server)
+
   if response["status"] != "ok":
     print "Datadog upload failed with response:\n\n%r" % response
-  # response = dog_http_api.metric(metricName + ".anomalyScore", anomaliesData,
-  #                                host=server)
+
   response = api.Metric.send(metric=metricName + ".anomalyScore", points=anomaliesData, host=server)
+
   if response["status"] != "ok":
     print "Datadog upload failed with response:\n\n%r" % response
 
