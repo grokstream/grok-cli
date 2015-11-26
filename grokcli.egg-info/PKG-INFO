@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: grokcli
+Version: 1.1.1
+Summary: Grok Command Line Interface
+Home-page: https://github.com/grokstream/grok-cli
+Author: Avik Partners, LLC
+Author-email: support@grokstream.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: grok,grokstream,anomaly detection,monitoring
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2
+Classifier: Topic :: Utilities

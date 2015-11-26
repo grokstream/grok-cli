@@ -1,0 +1,10 @@
+certifi
+pyyaml
+requests
+prettytable
+
+[docs]
+sphinx
+
+[samples]
+datadog
