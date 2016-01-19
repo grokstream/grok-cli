@@ -1,3 +1,0 @@
-[console_scripts]
-grok = grokcli:main
-
