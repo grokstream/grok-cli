@@ -1,0 +1,74 @@
+*.pyc
+*.sublime-project
+*.sublime-workspace
+.idea
+build/sphinx
+conf/.grok_id
+conf/ssl/*.bak
+conf/grok-api.conf
+# conf/application.conf
+conf/grok.conf
+conf/model-checkpoint.conf
+conf/model-swapper.conf
+conf/product.conf
+conf/quota.conf
+conf/rabbitmq.conf
+conf/supervisord.conf
+conf/overrides/
+grok.egg-info
+grok/engine/utils/logs
+grok-api-server/conf/
+grok-app/logs
+grok-app/static/grok-common
+grok-supervisor.sock
+grok-supervisord.pid
+logs/
+node_modules/
+npm-debug.log
+sauce_connect.*
+tests/py/integration/engine/utils/logs
+tests/py/unit/engine/utils/logs
+tests/results
+*/*.egg-info/
+*.*.un~
+
+### From grok-mobile ###
+# Mac OS X
+.DS_Store
+
+# built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+# generated files
+bin/
+gen/
+out/
+artifacts
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Eclipse project files
+#.classpath
+#.project
+android/libs/android-support-v4.jar.properties
+android/libs/achartengine-1.1.0.jar.properties
+android/libs/msgpack-0.6.9.jar.properties
+android/password.properties
+android/grok.keystore
+.metadata
+
+# Idea project files
+*.iml
+.idea
+robotium-solo-5.0.1.jar.properties
+.pmd
+gradle.properties
+.keys
+.vagrant
