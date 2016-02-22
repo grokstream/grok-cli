@@ -2,3 +2,4 @@ certifi
 pyyaml
 requests
 prettytable
+pysphere
