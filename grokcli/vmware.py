@@ -57,7 +57,7 @@ def getVMdata(configFilePath, host, user, password, vmListFile):
 
     metric = []
 
-    vmMetrics = {'disk.write': 131079, 'disk.read': 131078, 'disk.usage': 131073, 'cpu.usage': 1,'mem.usage': 65537}
+    vmMetrics = {'disk.write': 131079, 'disk.read': 131078, 'disk.usage': 131073, 'cpu.usage': 1, 'mem.usage': 65537}
     for vms in vmlist:
       vms = vms.strip()
       start = vms.find(']') + 2
@@ -117,7 +117,7 @@ if __name__ == "__main__":
   usage = "usage: %prog [options]"
   parser = optparse.OptionParser(usage=usage)
   parser.add_option("--grokServer", help="the Grok server URL")
-  parser.add_option("--grokApiKey", help="the Grok server API key")
+  parser.add_option("--grokApiKey", help="the Grok API key")
   parser.add_option("--configFilePath", help="the ESX config file")
   parser.add_option("--host", help="the ESX host to connect to")
   parser.add_option("--user", help="the ESX Username to use when connecting to host")
@@ -127,11 +127,11 @@ if __name__ == "__main__":
   (options, args) = parser.parse_args()
 
   if options.grokServer is None:
-    print "Must supply valid grokServer."
+    print "Must supply valid Grok server URL."
     sys.exit(1)
 
   if options.grokApiKey is None:
-    print "Must supply valid grokApiKey."
+    print "Must supply valid Grok API key."
     sys.exit(1)
 
   if options.configFilePath is None or (options.host is None and options.user is None and options.password is None):
